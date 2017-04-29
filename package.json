@@ -1,0 +1,23 @@
+{
+  "name": "friend_finder",
+  "version": "1.33.7",
+  "description": "Finding your best match based on past searches on our amazing platform since 2017!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karunashi/FriendFinder.git"
+  },
+  "author": "karunashi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karunashi/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/karunashi/FriendFinder#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  }
+}
