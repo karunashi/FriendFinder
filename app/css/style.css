@@ -1,0 +1,40 @@
+body {
+	font-family: 'Eagle Lake', cursive;
+	background: url("http://img.photobucket.com/albums/v487/death6kouji/old-grunge-paper-texture-background.jpg?t=1493374346");
+	background-size:cover
+}
+
+#friendMatchImg {
+	max-width: 80%;
+	height: auto;
+}
+
+.well { 
+	background-color: rgba(245, 245, 245, 0.45)
+}
+.jumbotron {
+    background-color: rgba(245, 245, 245, 0.45);
+    font-size: 50px;
+}
+
+#submit, #registerYourself {
+	background-color: rgba(245, 245, 245, 0.45);
+	color:black;
+}
+#submit:hover, #registerYourself:hover {
+	background-color: rgba(100, 245, 245, 0.45);
+}
+select:hover, input:hover {
+	background-color: rgba(245, 245, 245, 0.45);
+}
+option, .form-control {
+	background-color: tan;
+}
+
+a {
+	color: brown;
+}
+
+a:hover {
+	color: red;
+}
