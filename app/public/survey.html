@@ -159,6 +159,14 @@
 	$("#submit").on("click", function(){
 		function validate() {
 			// Put function to validate submission
+			var correctValueCheck = true;
+			$(".form-control").each(function(){
+				if ($(this).val() === "") {
+					// If they left the choices as "" which is the empty value, it will validate that they didn't select a choice.
+					correctValueCheck = false;
+				}
+			});
+			return correctValueCheck;
 		}
 		// If data validation worked ~ It should create new user data and store it.
 		if (validate() == true) {
