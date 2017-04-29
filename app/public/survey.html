@@ -175,14 +175,24 @@
 				pic: $("#pic").val(),
 				charInfo: [$("#ques1").val(), $("#ques2").val(), $("#ques3").val(), $("#ques4").val(), $("#ques5").val(), $("#ques6").val(), $("#ques7").val(), $("#ques8").val(), $("#ques9").val(), $("#ques10").val()]
 			}
-		};
+		
 
-		var currentURL = window.location.origin;
+			var currentURL = window.location.origin;
 
-		$.post(currentURL + "api/friends", newUserData, function(info) {
+			$.post(currentURL + "api/friends", newUserData, function(info) {
 			// Should have it so that it should take the results of what we just created, and find the best match
-		});
-	});
+			}); 
+		
+		}; // If statement for validation ends here
+
+		else {
+			console.log("User input not fully recorded. Please review the survey choices.");
+		};
+		
+	}); // Submit button ends here
+
+
 </script>
 </body>
 </html>
+
