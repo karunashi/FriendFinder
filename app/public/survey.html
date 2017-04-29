@@ -25,7 +25,7 @@
         <!-- Survey Goes down here -->
         <div class="well">
             <h3><strong>Question 1</strong></h3>
-            <h4>Question Placeholder.</h4>
+            <h4>You are the mastermind in the group and you are always several steps ahead of your adversaries.</h4>
             <select class="form-control" id="ques1">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -35,7 +35,7 @@
                 <option value="5">5 (Strongly Agree)</option>
             </select>
             <h3><strong>Question 2</strong></h3>
-            <h4>Question Placeholder.</h4>
+            <h4>You wield unnatural powers that overwhelm your foes.</h4>
             <select class="form-control" id="ques2">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -45,7 +45,7 @@
                 <option value="5">5 (Strongly Agree)</option>
             </select>
             <h3><strong>Question 3</strong></h3>
-            <h4>Question Placeholder.</h4>
+            <h4>You prefer to let others do all dirty work for you while you observe from a distance.</h4>
             <select class="form-control" id="ques3">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -55,7 +55,7 @@
                 <option value="5">5 (Strongly Agree)</option>
             </select>
             <h3><strong>Question 4</strong></h3>
-            <h4>Question Placeholder.</h4>
+            <h4>Many would describe you as an entity that cannot perish permanently. You always find a way to return.</h4>
             <select class="form-control" id="ques4">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -65,7 +65,7 @@
                 <option value="5">5 (Strongly Agree)</option>
             </select>
             <h3><strong>Question 5</strong></h3>
-            <h4>Question Placeholder.</h4>
+            <h4>You have many followers within your organization and/or army.</h4>
             <select class="form-control" id="ques5">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -75,7 +75,7 @@
                 <option value="5">5 (Strongly Agree)</option>
             </select>
             <h3><strong>Question 6</strong></h3>
-            <h4>Question Placeholder.</h4>
+            <h4>You are the type to help the weak and you cannot ignore those needing aid.</h4>
             <select class="form-control" id="ques6">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -85,7 +85,7 @@
                 <option value="5">5 (Strongly Agree)</option>
             </select>
             <h3><strong>Question 7</strong></h3>
-            <h4>Question Placeholder.</h4>
+            <h4>You are the type that enjoys others' suffering, and usually the source of their despair.</h4>
             <select class="form-control" id="ques7">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -95,7 +95,7 @@
                 <option value="5">5 (Strongly Agree)</option>
             </select>
             <h3><strong>Question 8</strong></h3>
-            <h4>Question Placeholder.</h4>
+            <h4>You would sacrifice days, months, years, possibly your entire lifetime to safeguard the happiness of those you cherish.</h4>
             <select class="form-control" id="ques8">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -105,7 +105,7 @@
                 <option value="5">5 (Strongly Agree)</option>
             </select>
             <h3><strong>Question 9</strong></h3>
-            <h4>Question Placeholder.</h4>
+            <h4>Everyone and everything is expendable to your cause, and if it gets in the way of your ambition, you will not hesitate to ensure you continue on your goal. This includes your friends, family, animals, even the One-Above-All (God).</h4>
             <select class="form-control" id="ques9">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -115,7 +115,7 @@
                 <option value="5">5 (Strongly Agree)</option>
             </select>
             <h3><strong>Question 10</strong></h3>
-            <h4>Question Placeholder.</h4>
+            <h4>You sacrifice the lives of millions of various factions, many of whom are innoncent bystanders, to save the lives of your family and your beloved.</h4>
             <select class="form-control" id="ques10">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
@@ -169,17 +169,10 @@
            	correctValueCheck = false;
            } 
         // http://stackoverflow.com/questions/1795808/and-and-or-in-if-statements - For "or"
-       	// for (var i = 0; i < 10; i++) {
-        // 	else if ($("#ques"+[i]) === "") {
-        // 		correctValueCheck = false
-        // 	}
-        // }
 
         	else if ($("#ques1").val() === "" || $("#ques2").val() === "" || $("#ques3").val() === "" || $("#ques4").val() === "" || $("#ques5").val() === ""|| $("#ques6").val() === "" || $("#ques7").val() === "" || $("#ques8").val() === "" || $("#ques9").val() === "" || $("#ques10").val() === "") {
            	correctValueCheck = false;
            }
-
-           console.log(correctValueCheck) // Check if validation works
 
         // If data validation worked ~ It should create new user data and store it.
         if (correctValueCheck === true) {
