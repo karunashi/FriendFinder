@@ -26,7 +26,7 @@
         <div class="well">
             <h3><strong>Question 1</strong></h3>
             <h4>Question Placeholder.</h4>
-            <select data-placeholder="" class="chosen-select" id="ques1">
+            <select class="form-control" id="ques1">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -157,36 +157,50 @@
     </div>
     <script type="text/javascript">
     $("#submit").on("click", function() {
-        function validate() {
+
             // Put function to validate submission
-            var correctValueCheck = true;
-            $(".form-control").each(function() {
-                if ($(this).val() === "") {
-                    // If they left the choices as "" which is the empty value, it will validate that they didn't select a choice.
-                    correctValueCheck = false;
-                }
-            });
-            return correctValueCheck;
-        }
+        	var correctValueCheck = true;
+
+        	// Check to see if the validation works
+        	if ($("#name").val() === "") {
+           	correctValueCheck = false;
+           }
+        	else if ($("#pic").val() === "") {
+           	correctValueCheck = false;
+           } // http://stackoverflow.com/questions/1795808/and-and-or-in-if-statements - For "or"
+        	// for (var i = 0; i < 10; i++) {
+        	// 	else if ($("#ques"+[i]) === "") {
+        	// 		correctValueCheck = false
+        	// 	}
+        	// }
+
+        	else if ($("#ques1").val() === "" || $("#ques2").val() === "" || $("#ques3").val() === "" || $("#ques4").val() === "" || $("#ques5").val() === ""|| $("#ques6").val() === "" || $("#ques7").val() === "" || $("#ques8").val() === "" || $("#ques9").val() === "" || $("#ques10").val() === "") {
+           	correctValueCheck = false;
+           }
+
+           console.log(correctValueCheck) // Check if validation works
+
         // If data validation worked ~ It should create new user data and store it.
-        if (validate() == true) {
+        if (correctValueCheck === true) {
             var newUserData = {
                 name: $("#name").val(),
                 pic: $("#pic").val(),
                 charInfo: [$("#ques1").val(), $("#ques2").val(), $("#ques3").val(), $("#ques4").val(), $("#ques5").val(), $("#ques6").val(), $("#ques7").val(), $("#ques8").val(), $("#ques9").val(), $("#ques10").val()]
             }
-
+            // Delete console.logs before submitting, for testing purposes (thank god for nodemon)
+            console.log(newUserData)
+            console.log(window.location.origin)
 
             var currentURL = window.location.origin;
 
-            $.post(currentURL + "api/friends", newUserData, function(info) {
+            $.post(currentURL + "/api/friends", newUserData, function(info) {
             	console.log(info);
             	$("#friendMatchName").text(info.name);
             	$("#friendMatchImg").attr("src", info.pic);
             	$("#friendMatchModal").modal("toggle");
             });
 
-        }; // If statement for validation ends here
+        } // If statement for validation ends here
 
         else {
             console.log("User input not fully recorded. Please review the survey choices.");
