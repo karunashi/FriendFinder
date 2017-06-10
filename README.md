@@ -1,4 +1,4 @@
-# FriendFinder - Registry of the World
+# Registry of the World
 
 ## Live Link
  - https://infinite-fortress-13577.herokuapp.com/
